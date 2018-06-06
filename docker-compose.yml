@@ -1,0 +1,16 @@
+version: '3'
+services:
+  couchapp:
+    build: ./couchapp
+    ports:
+    - 5984:5984
+    volumes:
+    - ./couchapp/data:/usr/local/var/lib/couchdb
+    environment:
+    - COUCHDB_USER
+    - COUCHDB_PASSWORD
+  nginx:
+    build: ./nginx
+    ports:
+    - 8080:80
+    - 8443:443
