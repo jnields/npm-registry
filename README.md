@@ -6,5 +6,5 @@ By default, it does not replicate the public registry, but this can be changed b
 
 ```bash
 docker-compose up
-npm publish --registry http://localhost:8080
+npm publish --registry http://admin:password@localhost:8080
 ```
